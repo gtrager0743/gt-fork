@@ -123,33 +123,33 @@ bool dfs(int r, int c,
          vector<vector<int>>& parent_r,
          vector<vector<int>>& parent_c,
          int exit_r, int exit_c)
-
-int N = maze.size();
-int M = maze[0].size();
-
-if (r < 0 || r >= N || c < 0 || c >= M)
 {
+    int N = maze.size();
+    int M = maze[0].size();
+
+    if (r < 0 || r >= N || c < 0 || c >= M)
+    {
+        return false;
+    }
+
+    if (maze[r][c] == 1)
+    {
+        return false;
+    }
+
+    if (visited[r][c])
+    {
+        return false;
+    }
+    visited[r][c] = true;
+
+
+    if (r == exit_r && c == exit_c) {
+        return true;
+    }
+
     return false;
 }
-
-if (maze[r][c] == 1)
-{
-    return false;
-}
-
-if (visited[r][c])
-{
-    return false;
-}
-visited[r][c] = true;
-
-
-if (r == exit_r && c == exit_c) {
-    return true;
-}
-
-return false;
-
 // ----------------------------------------------------------
 // MAIN PROGRAM (students add DFS calls and logic)
 // ----------------------------------------------------------
