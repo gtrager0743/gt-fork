@@ -24,3 +24,12 @@
 **Issue or decision:** how will i stop recursion if it gets stuck in a loop between two open cells.
 **What I tried:** originally i was checking for the exit only, but realized the recursion could still loop forever after testing it.
 **Fix / resolution:** added a check for the visited array at the top. If already true, returns false to break loop. I also added the goal check to return true when the current (r, c) matches the exit coordinates.
+
+### Entry 4
+**Date:** 2026-04-24
+**Entry Type:** Bug Fix
+**Task worked on:** recursive direction loop.
+**Issue or decision:** the DFS was only moving in one direction and stopping.
+**Error message / symptom:** just generally breaks the whole program.
+**What I tried:** I tried manually calling the function for NSEW, but it made the code really long.
+**Fix / resolution:** for loop from 0 to 3. Calculate the neighbor coordinates nr = r + dr[i] and nc = c + dc[i]. This loop checks all directions for every step instead of manually doing it.
