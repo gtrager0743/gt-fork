@@ -137,6 +137,18 @@ if (maze[r][c] == 1)
     return false;
 }
 
+if (visited[r][c])
+{
+    return false;
+}
+visited[r][c] = true;
+
+
+if (r == exit_r && c == exit_c) {
+    return true;
+}
+
+return false;
 
 // ----------------------------------------------------------
 // MAIN PROGRAM (students add DFS calls and logic)
