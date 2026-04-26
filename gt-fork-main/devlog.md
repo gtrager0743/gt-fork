@@ -33,3 +33,10 @@
 **Error message / symptom:** just generally breaks the whole program.
 **What I tried:** I tried manually calling the function for NSEW, but it made the code really long.
 **Fix / resolution:** for loop from 0 to 3. Calculate the neighbor coordinates nr = r + dr[i] and nc = c + dc[i]. This loop checks all directions for every step instead of manually doing it.
+
+### Entry 5
+**Date:** 2026-04-26
+**Entry Type:** Engineering Decision
+**Task worked on:** Parent tracking for path reconstruction.
+**Issue or decision:** How to store the path so the program can print it later.
+**Decision:** I'm assigning the current coordinates `(r, c)` as the parent of the neighbor `(nr, nc)` right before the recursive call.
