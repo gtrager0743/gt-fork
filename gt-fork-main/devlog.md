@@ -40,3 +40,11 @@
 **Task worked on:** Parent tracking for path reconstruction.
 **Issue or decision:** How to store the path so the program can print it later.
 **Decision:** I'm assigning the current coordinates `(r, c)` as the parent of the neighbor `(nr, nc)` right before the recursive call.
+
+### Entry 6
+**Date:** 2026-04-27
+**Entry Type:** Edge Case
+**Task worked on:** main function integration.
+**Issue or decision:** DFS start point = 'S' coordinates provided by the generator.
+**What I tried:** I considered hardcoding a start at (0,0), then reread the instructions and realized 'S' and 'E' are randomly placed on boundaries.
+**Fix / resolution:** used the ent_r and ent_c variables extracted from the `entrance` pair to achieve this. it makes sure that the recursion starts on the correct boundary cell marked 'S' regardless of where it is randomly generated.
