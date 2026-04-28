@@ -143,8 +143,6 @@ bool dfs(int r, int c,
     }
     visited[r][c] = true;
 
-    // debug
-    // cout << "Visiting: (" << r << ", " << c << ")" << endl;
 
     if (r == exit_r && c == exit_c)
     {
