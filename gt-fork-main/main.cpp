@@ -132,15 +132,11 @@ bool dfs(int r, int c,
         return false;
     }
 
-    if (maze[r][c] == 1)
+    if (maze[r][c] == 1 || visited[r][c])
     {
         return false;
     }
 
-    if (visited[r][c])
-    {
-        return false;
-    }
     visited[r][c] = true;
 
 
@@ -153,6 +149,8 @@ bool dfs(int r, int c,
     for (int i = 0; i < 4; i++)
     {
         int nr = r + dr[i];
+
+
         int nc = c + dc[i];
 
         if (nr >= 0 && nr < N && nc >= 0 && nc < M && !visited[nr][nc] && maze[nr][nc] == 0)

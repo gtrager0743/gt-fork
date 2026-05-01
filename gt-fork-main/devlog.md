@@ -2,19 +2,19 @@
 
 ### Entry 1
 **Date:** 2026-04-18
-**Entry Type:** Setup & Environment Check
+**Entry Type:** Bug Fix
 **Task worked on:** Repository initialization and environment test.
-**Issue encountered:** Setting up the local development environment and verifying the instructor's starter code compiles and runs correctly.
-**Error message / symptom:** N/A — Initial project setup and verification phase.
-**What I tried:** I forked the repository, cloned it locally, and executed the initial code to observe the functions in action
-**Fix / resolution:** Successfully generated and printed a random maze with 'S' and 'E' markers. Everything works and I have a clear plan for implementing recursive DFS logic over the next two weeks.
+**Issue encountered:** Setting up the local development environment.
+**Error message / symptom:** couldn't get the fork to work
+**What I tried:** I googled how to fork a repository, cloned it locally, and reviewed the initial code
+**Fix / resolution:** Successfully generated and printed a random maze with 'S' and 'E' markers. Everything works and I have a good idea how im going to implement recursive DFS logic over the next two weeks.
 
 ### Entry 2
 **Date:** 2026-04-21
 **Entry Type:** Engineering Decision
 **Task worked on:** DFS function signature
 **Issue or decision:** deciding how to pass the maze and tracking arrays to the recursive function.
-**Decision:** pass all vectors by reference using & (e.g., vector<vector<int>>& maze).
+**Decision:** pass all vectors by reference using & (example: vector<vector<int>>& maze).
 **Reasoning:** copying the whole 2D maze for all steps requires a lot of memory use and could cause a crash or slow performance with large grids.
 
 ### Entry 3
@@ -37,14 +37,14 @@
 ### Entry 5
 **Date:** 2026-04-26
 **Entry Type:** Engineering Decision
-**Task worked on:** Parent tracking for path reconstruction.
+**Task worked on:** tracking for path reconstruction.
 **Issue or decision:** How to store the path so the program can print it later.
-**Decision:** I'm assigning the current coordinates `(r, c)` as the parent of the neighbor `(nr, nc)` right before the recursive call.
+**Decision:** I'm assigning the current coordinates (r, c) as the parent of the neighbor (nr, nc) right before the recursive call.
 
 ### Entry 6
 **Date:** 2026-04-27
 **Entry Type:** Edge Case
 **Task worked on:** main function integration.
 **Issue or decision:** DFS start point = 'S' coordinates provided by the generator.
-**What I tried:** I considered hardcoding a start at (0,0), then reread the instructions and realized 'S' and 'E' are randomly placed on boundaries.
-**Fix / resolution:** used the ent_r and ent_c variables extracted from the `entrance` pair to achieve this. it makes sure that the recursion starts on the correct boundary cell marked 'S' regardless of where it is randomly generated.
+**What I tried:** I was gonna hardcode a start at (0,0), then I reread the instructions and realized S and E have to be randomly placed on boundaries.
+**Fix / resolution:** used the ent_r and ent_c variables extracted from the entrance pair to achieve this. it makes sure that the recursion starts on the correct boundary cell marked 'S' regardless of where it is randomly generated.
